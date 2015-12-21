@@ -1,0 +1,8 @@
+<?php
+/** @var $block \Pre\News\Block\FeedView */
+/** @var $feed \Pre\News\Model\Feed */
+$feed = $block->getFeed(); ?>
+<h1><?php echo $feed->getFeedName() ?></h1>
+<div>
+    <?php echo $feed->getFeedUrl(); ?>
+</div>

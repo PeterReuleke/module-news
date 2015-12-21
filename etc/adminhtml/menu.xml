@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Pre_News::news_content" title="News" module="Pre_News" sortOrder="50" parent="Magento_Backend::content" resource="Pre_News::news_content" />
+        <add id="Pre_News::feed" title="Feeds" module="Pre_News" sortOrder="0" parent="Pre_News::news_content" action="news/feed" resource="Pre_News::feed"/>
+    </menu>
+</config>

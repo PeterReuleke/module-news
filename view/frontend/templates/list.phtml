@@ -1,0 +1,16 @@
+<?php /** @var $block \Pre\News\Block\FeedList */ ?>
+<h1><?php echo __('Current News') ?></h1>
+<ul>
+    <?php /** @var $feed \Pre\News\Model\Feed */ ?>
+    <?php foreach ($block->getFeeds() as $feed): ?>
+        <li>
+            <h3>
+                <a href="<?php echo $feed->getUrl() ?>"><?php echo $feed->getFeedName() ?></a>
+            </h3>
+
+            <div>
+                <?php echo $feed->getFeedUrl(); ?>
+            </div>
+        </li>
+    <?php endforeach; ?>
+</ul>

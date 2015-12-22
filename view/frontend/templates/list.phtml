@@ -8,9 +8,14 @@
                 <a href="<?php echo $feed->getUrl() ?>"><?php echo $feed->getFeedName() ?></a>
             </h3>
 
-            <div>
-                <?php echo $feed->getFeedUrl(); ?>
-            </div>
+            <ul>
+                <?php $rssData = $block->getRssContent($feed->getFeedUrl()); ?>
+                <?php foreach ($rssData as $rss): ?>
+                    <li>
+                        <a href="<?php echo $rss['href'] ?>"><b><?php echo $rss['title0'] ?></b><?php echo (!empty($rss['title1'])) ?  ": " . $rss['title1'] : "" ?></a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
         </li>
     <?php endforeach; ?>
 </ul>

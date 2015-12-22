@@ -11,7 +11,7 @@ class Feed extends \Magento\Framework\Model\AbstractModel implements FeedInterfa
     /**#@+
      * Feed's Statuses
      */
-    const STATUS_ENABLED = 1;
+    const STATUS_ENABLED  = 1;
     const STATUS_DISABLED = 0;
     /**#@-*/
 
@@ -115,7 +115,7 @@ class Feed extends \Magento\Framework\Model\AbstractModel implements FeedInterfa
      */
     public function getId()
     {
-        return $this->getData(self::Feed_ID);
+        return $this->getData(self::FEED_ID);
     }
 
     /**

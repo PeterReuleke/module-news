@@ -78,7 +78,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
             'feed_name',
             'text',
             [
-                'name' => 'title',
+                'name' => 'feed_name',
                 'label' => __('Feed Name'),
                 'title' => __('Feed Name'),
                 'required' => true
@@ -115,12 +115,11 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
 
         $fieldset->addField(
             'feed_url',
-            'editor',
+            'text',
             [
                 'name'      => 'feed_url',
                 'label'     => __('Feed Url'),
                 'title'     => __('Feed Url'),
-                'style'     => 'height:36em',
                 'required'  => true
             ]
         );
